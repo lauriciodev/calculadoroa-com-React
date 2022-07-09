@@ -67,7 +67,7 @@ const operacao =(oper)=>{
     setResultado(r)
     setOperado(true)
   }catch{
-    setResultado("erro na operação")
+    setResultado("erro!")
   }
 }
 
@@ -100,7 +100,8 @@ const cssTela = {
   backgroundColor:"#3c1d",
   flexDirection:"column",
   width:"100%",
-  height: "80px"
+  height: "80px",
+  border:"1px solid #fff"
 }
   
 const cssTelaOpera ={
@@ -121,7 +122,8 @@ const cssBtn = {
   border: "1px solid #3c5a",
   backgroundColor:"#3c4f",
   textAlign:"center",
-  borderColor:"#4f5"
+  borderColor:"#4f5",
+  color:"#fff"
 
  
 }
@@ -131,7 +133,7 @@ const cssContanerBtn ={
   height:"100%",
   display: "flex",
   flexWrap:"wrap",
-
+   padding:"4px"
 
   
 }
@@ -167,7 +169,7 @@ const cssContanerBtn ={
      {Btn("+",()=>addDigitoTela("+"))}
      {Btn("0",()=>addDigitoTela("0"))}
      {Btn(".",()=>addDigitoTela("."))}
-     {Btn("=>",()=>operacao("bs"))}
+     {Btn("<=",()=>operacao("bs"))}
      {Btn("=",()=>operacao("="))}
 
     </div>
